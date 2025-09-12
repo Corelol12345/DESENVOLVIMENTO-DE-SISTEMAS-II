@@ -28,7 +28,13 @@ Será desenvolvido um site de vendas de passagens aéreas, permitindo que usuár
 <img width="1680" height="2860" alt="Blank diagram" src="https://github.com/user-attachments/assets/65f1f4f2-c366-438c-a906-df90b07170c8" />
 
 ### Casos de Uso Resumidos por Ator
+## Usuário
+<img width="2481" height="3508" alt="Planilha sem título (1)_1" src="https://github.com/user-attachments/assets/88796229-6561-47da-97b5-97a68e7da110" />
+## Funcionário
+<img width="2481" height="3508" alt="Planilha sem título (1)_2" src="https://github.com/user-attachments/assets/9ee222ce-0523-4518-81df-8d98f5dcc90e" 
+## Central de Pagamentos
+<img width="2481" height="3508" alt="Planilha sem título (1)_4" src="https://github.com/user-attachments/assets/8e1bcb27-2234-41ec-bfc9-f17400d612f6" />
 
-<img width="2481" height="3508" alt="Planilha sem título" src="https://github.com/user-attachments/assets/01d2dfd9-3518-41c3-bb46-f122e8ed4c4c" />
+
 
 

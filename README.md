@@ -36,8 +36,7 @@ Será desenvolvido um site de vendas de passagens aéreas, permitindo que usuár
 
 ## Funcionário
 
-<img width="2481" height="3508" alt="Planilha sem título (1)_2" src="https://github.com/user-attachments/assets/9ee222ce-0523-4518-81df-8d98f5dcc90e" />
-
+<img width="1533" height="256" alt="image" src="https://github.com/user-attachments/assets/d558def5-f2e9-48df-b120-54e5c777ce55" />
 
 
 ## Central de Pagamentos

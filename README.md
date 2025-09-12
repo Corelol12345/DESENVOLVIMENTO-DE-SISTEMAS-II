@@ -23,8 +23,11 @@ Será desenvolvido um site de vendas de passagens aéreas, permitindo que usuár
 - **Desempenho**: Tempo de resposta rápido, mesmo com alto volume de acessos.
 - **Escalabilidade**: Capacidade de suportar o crescimento da base de usuários e voos ofertados.
 
+### Casos de Uso
 
 <img width="1680" height="2860" alt="Blank diagram" src="https://github.com/user-attachments/assets/65f1f4f2-c366-438c-a906-df90b07170c8" />
+
+### Casos de Uso Resumidos por Ator
 
 <img width="2481" height="3508" alt="Planilha sem título" src="https://github.com/user-attachments/assets/01d2dfd9-3518-41c3-bb46-f122e8ed4c4c" />
 

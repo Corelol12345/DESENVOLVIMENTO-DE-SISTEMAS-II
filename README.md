@@ -45,6 +45,18 @@ Será desenvolvido um site de vendas de passagens aéreas, permitindo que usuár
 <img width="1593" height="155" alt="image" src="https://github.com/user-attachments/assets/7a94a4f7-6f4c-40a8-bc52-b9b6039ac7f3" />
 
 
+<img width="661" height="227" alt="image" src="https://github.com/user-attachments/assets/3985ecee-aa97-4b11-a0f9-d681e7d4a2f4" />
+
+<img width="665" height="258" alt="image" src="https://github.com/user-attachments/assets/ef2d2734-25f0-4967-ba8a-c054fc5bf5b4" />
+
+<img width="632" height="104" alt="image" src="https://github.com/user-attachments/assets/502e8f36-8d1d-4a09-9f51-43f41f8f149a" />
+
+<img width="580" height="101" alt="image" src="https://github.com/user-attachments/assets/08c17b71-43a0-45eb-aa1f-b6494a998a52" />
+
+
+
+
+
 
 
 

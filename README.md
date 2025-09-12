@@ -22,3 +22,6 @@ Será desenvolvido um site de vendas de passagens aéreas, permitindo que usuár
 - **Segurança**: Proteção de dados dos usuários e das transações financeiras.
 - **Desempenho**: Tempo de resposta rápido, mesmo com alto volume de acessos.
 - **Escalabilidade**: Capacidade de suportar o crescimento da base de usuários e voos ofertados.
+
+
+<img width="1680" height="2860" alt="Blank diagram" src="https://github.com/user-attachments/assets/65f1f4f2-c366-438c-a906-df90b07170c8" />

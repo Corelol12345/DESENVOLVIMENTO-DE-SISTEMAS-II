@@ -26,5 +26,6 @@ Será desenvolvido um site de vendas de passagens aéreas, permitindo que usuár
 
 <img width="1680" height="2860" alt="Blank diagram" src="https://github.com/user-attachments/assets/65f1f4f2-c366-438c-a906-df90b07170c8" />
 
-![Planilha sem título](https://github.com/user-attachments/assets/5e795020-80c3-4c0a-b528-d046941f1c55)
+<img width="2481" height="3508" alt="Planilha sem título" src="https://github.com/user-attachments/assets/01d2dfd9-3518-41c3-bb46-f122e8ed4c4c" />
+
 

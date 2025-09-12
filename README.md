@@ -1,7 +1,7 @@
 # Projeto Linha Aérea
-
+---------------------
 ## Cenário de Negócio / Concepção
-
+---------------------
 ### Problema ou oportunidade percebida
 Atualmente, as passagens aéreas da empresa só podem ser adquiridas por meio de atendimento telefônico ou diretamente nos guichês localizados nos aeroportos. Esse processo limita o alcance de vendas, reduz a conveniência para os clientes e gera filas e sobrecarga no atendimento presencial.
 

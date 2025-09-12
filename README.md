@@ -1,4 +1,4 @@
-# TG1 - Cenário de Negócio, Concepção do Sistema e Modelo de Caso de Uso
+# Projeto Linha Aérea
 
 ## Cenário de Negócio / Concepção
 

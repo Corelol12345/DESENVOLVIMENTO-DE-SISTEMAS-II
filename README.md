@@ -29,17 +29,17 @@ Será desenvolvido um site de vendas de passagens aéreas, permitindo que usuár
 
 ### Casos de Uso Resumidos por Ator
 
-## Usuário
+#### Usuário
 
 <img width="1607" height="414" alt="image" src="https://github.com/user-attachments/assets/269577de-92d5-4d84-a351-869a93b832ca" />
 
 
-## Funcionário
+#### Funcionário
 
 <img width="1533" height="256" alt="image" src="https://github.com/user-attachments/assets/d558def5-f2e9-48df-b120-54e5c777ce55" />
 
 
-## Central de Pagamentos
+#### Central de Pagamentos
 
 <img width="1593" height="155" alt="image" src="https://github.com/user-attachments/assets/7a94a4f7-6f4c-40a8-bc52-b9b6039ac7f3" />
 

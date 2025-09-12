@@ -41,7 +41,8 @@ Será desenvolvido um site de vendas de passagens aéreas, permitindo que usuár
 
 ## Central de Pagamentos
 
-<img width="2481" height="3508" alt="Planilha sem título (1)_4" src="https://github.com/user-attachments/assets/8e1bcb27-2234-41ec-bfc9-f17400d612f6" />
+<img width="1593" height="155" alt="image" src="https://github.com/user-attachments/assets/7a94a4f7-6f4c-40a8-bc52-b9b6039ac7f3" />
+
 
 
 

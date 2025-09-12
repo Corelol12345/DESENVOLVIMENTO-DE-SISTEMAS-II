@@ -31,8 +31,7 @@ Será desenvolvido um site de vendas de passagens aéreas, permitindo que usuár
 
 ## Usuário
 
-<img width="2481" height="3508" alt="Planilha sem título (1)_1" src="https://github.com/user-attachments/assets/88796229-6561-47da-97b5-97a68e7da110" />
-
+<img width="1607" height="414" alt="image" src="https://github.com/user-attachments/assets/269577de-92d5-4d84-a351-869a93b832ca" />
 
 
 ## Funcionário

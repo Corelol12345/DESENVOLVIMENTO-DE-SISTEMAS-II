@@ -28,6 +28,7 @@ Será desenvolvido um site de vendas de passagens aéreas, permitindo que usuár
 <img width="1680" height="2860" alt="Blank diagram" src="https://github.com/user-attachments/assets/65f1f4f2-c366-438c-a906-df90b07170c8" />
 
 ### Casos de Uso Resumidos por Ator
+---------------
 
 ### Usuário
 

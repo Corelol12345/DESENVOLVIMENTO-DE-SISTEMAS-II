@@ -44,6 +44,8 @@ Será desenvolvido um site de vendas de passagens aéreas, permitindo que usuár
 
 <img width="1593" height="155" alt="image" src="https://github.com/user-attachments/assets/7a94a4f7-6f4c-40a8-bc52-b9b6039ac7f3" />
 
+--------------------------
+
 ### Caso de Uso Crítico
 
 <img width="661" height="227" alt="image" src="https://github.com/user-attachments/assets/3985ecee-aa97-4b11-a0f9-d681e7d4a2f4" />

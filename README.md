@@ -56,8 +56,9 @@ Será desenvolvido um site de vendas de passagens aéreas, permitindo que usuár
 
 <img width="529" height="101" alt="image" src="https://github.com/user-attachments/assets/e77ae0a7-4959-4f07-ac74-f7e1494cbf77" />
 
+-----------------
 ### Diagrama de Dominio
-## Explicação do Processo de Modelagem de Domínio
+### Explicação do Processo de Modelagem de Domínio
 
 A modelagem de domínio do projeto foi conduzida por meio de um processo iterativo, evoluindo de um entendimento inicial do negócio para um modelo mais detalhado e preciso. Utilizamos o Diagrama de Classe, uma das formas de representação da UML (Linguagem de Modelagem Unificada), para estruturar visualmente as entidades e suas relações.
 

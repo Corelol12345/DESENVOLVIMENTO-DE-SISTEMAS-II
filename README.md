@@ -56,6 +56,11 @@ Será desenvolvido um site de vendas de passagens aéreas, permitindo que usuár
 
 <img width="529" height="101" alt="image" src="https://github.com/user-attachments/assets/e77ae0a7-4959-4f07-ac74-f7e1494cbf77" />
 
+### Diagrama de Dominio
+
+<img width="3889" height="1973" alt="Blank diagram (1)" src="https://github.com/user-attachments/assets/e83e8e7d-21aa-4ec9-bdab-f37d4b73a7a3" />
+
+
 
 
 

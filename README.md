@@ -57,6 +57,30 @@ Será desenvolvido um site de vendas de passagens aéreas, permitindo que usuár
 <img width="529" height="101" alt="image" src="https://github.com/user-attachments/assets/e77ae0a7-4959-4f07-ac74-f7e1494cbf77" />
 
 ### Diagrama de Dominio
+##Explicação do Processo de Modelagem de Domínio
+
+A modelagem de domínio do projeto foi conduzida por meio de um processo iterativo, evoluindo de um entendimento inicial do negócio para um modelo mais detalhado e preciso. Utilizamos o Diagrama de Classe, uma das formas de representação da UML (Linguagem de Modelagem Unificada), para estruturar visualmente as entidades e suas relações.
+
+O processo pode ser descrito em três etapas principais:
+
+1. Identificação das Entidades e Padrões de Análise
+A fase inicial consistiu em identificar os principais substantivos do negócio, que representam as entidades do nosso domínio. A partir dos requisitos do sistema, definimos classes como Cliente, Voo, Passagens, Pedido e Atendente.
+
+Neste ponto, o diagrama ainda continha elementos que descreviam ações do sistema (verbos), como "Pesquisar Voos". Para alinhar o modelo com o padrão de um diagrama de domínio, que foca nas entidades, essas classes foram removidas na etapa seguinte, simplificando a representação.
+
+2. Detalhamento e Modificações
+Com as entidades principais já definidas, o foco se voltou para o aprimoramento do diagrama. Adicionamos os atributos essenciais a cada classe, como data e numero para o Voo, e nome e email para a Conta. Essa modificação foi crucial para dar mais substância ao modelo, especificando as informações que cada entidade deveria conter.
+
+3. Definição de Relacionamentos e Restrições
+A etapa final foi a de definir como as entidades interagem entre si. Para isso, estabelecemos os relacionamentos e suas cardinalidades. Por exemplo:
+
+A relação entre Voo e Passagens foi definida com a cardinalidade 1..*, indicando que um Voo pode ter muitas Passagens.
+
+A conexão entre Cliente e Passagens também foi marcada com 1..*, mostrando que um Cliente pode adquirir várias Passagens.
+
+Em outros casos, como a relação entre Passagens e Pedido, a cardinalidade 1..* reforçou que um único Pedido pode conter muitas Passagens.
+
+Esse processo incremental nos permitiu construir um modelo de domínio robusto, que não apenas mapeia as entidades do nosso sistema, mas também ilustra as regras de negócio de forma clara e visual.
 
 <img width="3889" height="1973" alt="Blank diagram (1)" src="https://github.com/user-attachments/assets/e83e8e7d-21aa-4ec9-bdab-f37d4b73a7a3" />
 

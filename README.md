@@ -92,7 +92,22 @@ Esse processo incremental nos permitiu construir um modelo de domínio robusto, 
 ### Prototipagem
 
 ### Pagina inicial com as passagens
+
+Principais Elementos e Objetivos
+Barra de Navegação Superior: Permite ao usuário alternar entre as seções principais do site, como Passagens, Pacotes e Destinos, além de acessar as configurações e o perfil.
+
+Barra de Busca e Filtros: A área central para iniciar uma nova busca de passagens, com campos para texto (origem/destino) e data.
+
+Filtros Laterais: Localizados à esquerda, oferecem ferramentas para refinar a pesquisa, permitindo ao usuário ajustar o preço e outras opções como a escolha de assento.
+
+Lista de Passagens Encontradas: Exibe de forma clara os resultados da busca, mostrando as passagens disponíveis com informações básicas em cada item.
+
+Controles de Navegação (Paginação): Na parte inferior da tela, os botões Previous, Next e os números de página permitem navegar facilmente por todos os resultados.
+
+Botões de Ação Flutuantes: No canto inferior direito, os botões de compartilhar e de chat oferecem ao usuário opções de interação e suporte durante a navegação.
 <img width="987" height="650" alt="image" src="https://github.com/user-attachments/assets/621c1259-10f2-4a86-ac23-83fa1c852638" />
+
+---------------------------------------------
 
 ### Pagina Seleção de Passagem
 <img width="1113" height="731" alt="image" src="https://github.com/user-attachments/assets/8b4cc437-099b-47ce-af4f-ddf2dd20bb26" />

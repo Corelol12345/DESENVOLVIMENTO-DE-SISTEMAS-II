@@ -105,12 +105,25 @@ Lista de Passagens Encontradas: Exibe de forma clara os resultados da busca, mos
 Controles de Navegação (Paginação): Na parte inferior da tela, os botões Previous, Next e os números de página permitem navegar facilmente por todos os resultados.
 
 Botões de Ação Flutuantes: No canto inferior direito, os botões de compartilhar e de chat oferecem ao usuário opções de interação e suporte durante a navegação.
+
 <img width="987" height="650" alt="image" src="https://github.com/user-attachments/assets/621c1259-10f2-4a86-ac23-83fa1c852638" />
 
 ---------------------------------------------
 
 ### Pagina Seleção de Passagem
+
+Principais Elementos e Objetivos
+Opções de Voo (Central): Exibe os detalhes do voo de ida (Voo Ida) e permite que o usuário escolha a classe. As duas opções mostradas são Econômica e Executiva, cada uma com seu preço e uma lista de benefícios. O objetivo é permitir que o usuário selecione a tarifa desejada.
+
+Formulário de Contato (Lateral Direita): Uma seção dedicada à coleta de dados do usuário. Inclui campos para Nome, Sobrenome, Email e uma Mensagem. O objetivo é permitir que o usuário forneça suas informações e, possivelmente, entre em contato ou finalize a compra.
+
+Barra de Navegação Superior: Mantém a consistência visual, permitindo ao usuário navegar entre as seções Passagens, Pacotes e Destinos, além de acessar as configurações e seu perfil.
+
+Botões de Ação Flutuantes: Na parte inferior direita, os botões de compartilhar e de chat fornecem opções de interação e suporte durante o processo.
+
 <img width="1113" height="731" alt="image" src="https://github.com/user-attachments/assets/8b4cc437-099b-47ce-af4f-ddf2dd20bb26" />
+
+--------------------------------------
 
 ### Pagina de Checkout
 <img width="940" height="622" alt="image" src="https://github.com/user-attachments/assets/867a682a-f7d9-4354-87b2-49d7df942b58" />

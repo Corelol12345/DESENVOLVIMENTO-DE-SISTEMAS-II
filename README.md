@@ -94,6 +94,10 @@ Esse processo incremental nos permitiu construir um modelo de domínio robusto, 
 ### Pagina inicial com as passagens
 <img width="987" height="650" alt="image" src="https://github.com/user-attachments/assets/621c1259-10f2-4a86-ac23-83fa1c852638" />
 
+### Pagina Seleção de Passagem
+<img width="1113" height="731" alt="image" src="https://github.com/user-attachments/assets/8b4cc437-099b-47ce-af4f-ddf2dd20bb26" />
+
+
 
 
 

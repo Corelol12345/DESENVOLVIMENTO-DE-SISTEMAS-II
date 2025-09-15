@@ -97,6 +97,10 @@ Esse processo incremental nos permitiu construir um modelo de domínio robusto, 
 ### Pagina Seleção de Passagem
 <img width="1113" height="731" alt="image" src="https://github.com/user-attachments/assets/8b4cc437-099b-47ce-af4f-ddf2dd20bb26" />
 
+### Pagina de Checkout
+<img width="940" height="622" alt="image" src="https://github.com/user-attachments/assets/867a682a-f7d9-4354-87b2-49d7df942b58" />
+
+
 
 
 

@@ -87,6 +87,14 @@ Esse processo incremental nos permitiu construir um modelo de domínio robusto, 
 
 <img width="3889" height="1973" alt="Blank diagram (1)" src="https://github.com/user-attachments/assets/e83e8e7d-21aa-4ec9-bdab-f37d4b73a7a3" />
 
+-------------------------------
+
+### Prototipagem
+
+### Pagina inicial com as passagens
+<img width="987" height="650" alt="image" src="https://github.com/user-attachments/assets/621c1259-10f2-4a86-ac23-83fa1c852638" />
+
+
 
 
 

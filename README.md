@@ -126,8 +126,23 @@ Botões de Ação Flutuantes: Na parte inferior direita, os botões de compartil
 --------------------------------------
 
 ### Pagina de Checkout
+
+Principais Elementos e Objetivos
+Resumo das Passagens (Central): Exibe de forma clara os detalhes das passagens de ida e volta que o usuário selecionou. Cada resumo possui um layout padrão com título e subtítulo, além de botões para remover ou editar a seleção. O objetivo é permitir que o usuário revise sua escolha antes de prosseguir com o pagamento.
+
+Dados de Pagamento (Lateral Direita): Nesta seção, o usuário insere suas informações de pagamento em campos de entrada genéricos. O objetivo é coletar os dados necessários para processar a transação.
+
+Valor Total: Um painel destacado mostra o valor final da compra, R$ 564,45, dando ao usuário a informação exata do custo total.
+
+Botões de Ação: O usuário pode cancelar a transação ou finalizar a compra. O botão "Finalizar" é o principal, pois leva o usuário à conclusão do processo de checkout.
+
+Barra de Navegação Superior: Permite a navegação para outras seções do site, como Passagens, Pacotes e Destinos.
+
+Botões de Ação Flutuantes: No canto inferior direito, os botões de compartilhar e chat fornecem opções de suporte e interação, permanecendo visíveis ao longo do processo de compra.
+
 <img width="940" height="622" alt="image" src="https://github.com/user-attachments/assets/867a682a-f7d9-4354-87b2-49d7df942b58" />
 
+--------------------------------
 
 
 

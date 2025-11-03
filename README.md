@@ -213,6 +213,45 @@ Os requisitos funcionais do sistema, extraídos dos diagramas e divididos por at
 * Um **Pedido** deve estar associado a um ou mais **Voos**.
 * Um **Atendente** é o ator responsável por gerenciar os dados de **Voos**, **Rotas** e **Usuários**.
 * Toda transação de compra que gera um **Pedido** deve ser processada e validada pela **Central de Pagamentos**.
+-----------------------------------------
+# Diagrama de Sequência
+<img width="1453" height="994" alt="Diagrama" src="https://github.com/user-attachments/assets/08b042b0-6cfd-4be3-a796-c039a4d89bac" />
+
+## Análise do Design com Padrões GRASP
+
+A arquitetura de software para o caso de uso "Comprar Passagem", ilustrada no diagrama de sequência, foi desenvolvida com base nos padrões GRASP (General Responsibility Assignment Software Patterns). A aplicação desses padrões visa a criação de um design com baixo acoplamento, alta coesão e maior manutenibilidade.
+
+A seguir, descrevemos os padrões aplicados e a justificativa técnica para suas utilizações.
+
+### 1. Padrão: Controlador (Controller)
+
+* **Princípio Fundamental:** Atribuir a responsabilidade de lidar com eventos da interface do usuário a uma classe intermediária, que não faz parte da camada de apresentação, mas representa o sistema ou um cenário de caso de uso.
+
+* **Aplicação no Projeto:** Foi implementada a classe `ControladorPedido`. No diagrama, a `TelaSelecaoPassagem` não contém a lógica de negócio para a compra. Em vez disso, ela delega a responsabilidade ao `ControladorPedido` através da chamada `iniciarCompra()`. O controlador, por sua vez, coordena as interações subsequentes com as classes de domínio (`Pedido`) e sistemas externos (`CentralPagamentos`).
+
+* **Justificativa da Utilização:**
+    * **Baixo Acoplamento:** Esta abordagem dissocia a camada de apresentação (UI) da lógica de negócio. Modificações na interface não impactam as regras de como uma compra é processada, e vice-versa.
+    * **Alta Coesão e Reutilização:** O `ControladorPedido` se torna uma classe coesa, com a única responsabilidade de orquestrar o processo de compra. Essa lógica centralizada pode ser reutilizada por diferentes interfaces no futuro (ex: um aplicativo mobile), sem duplicação de código.
+
+### 2. Padrão: Criador (Creator)
+
+* **Princípio Fundamental:** Atribuir a responsabilidade de criar um objeto (Classe B) a outra classe (Classe A) se a Classe A agrega, contém ou possui uma forte associação com os objetos da Classe B.
+
+* **Aplicação no Projeto:**
+    1.  A classe `ControladorPedido` foi designada para criar instâncias de `Pedido`, pois é ela quem recebe os dados iniciais do usuário necessários para a criação do pedido.
+    2.  A classe `Pedido` é responsável por criar as instâncias de `Passagem`, pois um pedido conceitualmente agrega ou contém um conjunto de passagens.
+
+* **Justificativa da Utilização:**
+    * **Coesão e Contexto:** A criação dos objetos ocorre no contexto em que eles fazem mais sentido. Isso mantém a lógica de negócio organizada e evita a criação de "classes fábrica" genéricas que diminuem a coesão do sistema.
+
+### 3. Padrão: Especialista da Informação (Information Expert)
+
+* **Princípio Fundamental:** Atribuir uma responsabilidade à classe que detém a informação necessária para cumpri-la. Este é o princípio mais basilar para a atribuição de responsabilidades em um sistema orientado a objetos.
+
+* **Aplicação no Projeto:** A responsabilidade de calcular o valor total da compra foi atribuída à classe `Pedido`.
+
+* **Justificativa da Utilização:**
+    * **Encapsulamento e Baixo Acoplamento:** A classe `Pedido` é a única que conhece a lista completa de `Passagens` associadas a ele. Portanto, ela é a especialista com as informações necessárias para realizar o cálculo. Atribuir essa responsabilidade a outra classe (como o `ControladorPedido`) exigiria que o `Pedido` expusesse sua estrutura interna, violando o encapsulamento e aumentando o acoplamento entre as classes.
 
 
 

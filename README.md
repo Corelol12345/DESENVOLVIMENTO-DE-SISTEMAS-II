@@ -144,7 +144,75 @@ Botões de Ação Flutuantes: No canto inferior direito, os botões de compartil
 
 --------------------------------
 
+# Especificação Suplementar
 
+## Histórico de Revisões
+
+| Versão | Data       | Descrição                                                                                                                | Autor |
+| :----- | :--------- | :----------------------------------------------------------------------------------------------------------------------- | :---- |
+| 1.1    | 27/10/2025 | Criação da estrutura inicial do documento na Wiki, definindo as seções principais conforme solicitado na tarefa do TG3. | Marco |
+| 1.2    | 29/10/2025 | Adição da seção "Funcional", com a listagem e descrição detalhada de todos os casos de uso extraídos dos diagramas.   | Marco |
+| 1.3    | 31/10/2025 | Preenchimento das seções de Requisitos Não Funcionais (Segurança, Usabilidade, Confiabilidade e Desempenho).               | Marco |
+| 1.4    | 02/11/2025 | Revisão final do documento completo. Adição da seção "Regras de Negócio" com base no Diagrama de Domínio e pequenos ajustes de formatação. | Marco |
+
+## Introdução
+
+Este documento é o repositório de todos os requisitos da **Plataforma de Compra de Passagens** que não estão detalhados nos diagramas de casos de uso. Ele serve como um complemento, especificando critérios de qualidade e restrições operacionais do sistema.
+
+## Funcional
+
+Os requisitos funcionais do sistema, extraídos dos diagramas e divididos por ator, são:
+
+#### Ator: Usuário
+* **Pesquisar Voos Disponíveis:** Permite ao cliente consultar horários, datas, origens e destinos disponíveis.
+* **Cadastrar-se na Plataforma:** Permite que um novo usuário crie uma conta no sistema.
+* **Realizar Login:** Permite que um usuário autentique-se na plataforma para acessar suas informações.
+* **Comprar Passagem:** Processo completo onde o cliente seleciona um voo, escolhe assentos, insere seus dados, pode optar por utilizar milhas e efetua o pagamento.
+* **Consultar Passagens Compradas:** Permite ao usuário visualizar o histórico de passagens que adquiriu.
+* **Cancelar Passagem:** Permite que o usuário cancele uma passagem já comprada, sujeito às regras da empresa.
+* **Emitir Bilhete Eletrônico:** Após a confirmação da compra, o sistema gera e disponibiliza o bilhete eletrônico para o cliente.
+* **Consultar Rotas:** Permite ao usuário consultar todas as rotas operadas pela companhia.
+
+#### Ator: Atendente
+* **Cadastrar Novas Rotas:** Permite ao atendente registrar novas rotas (origem/destino) no sistema.
+* **Editar Informações do Voos:** Permite alterar informações de um voo já existente (ex: horário, status).
+* **Cancelar Voos:** Permite remover um voo do sistema, o que deve acionar uma notificação para os clientes afetados.
+* **Gerenciar Usuários:** Permite visualizar, editar ou remover contas de usuários do sistema. Inclui a capacidade de gerenciar as passagens associadas a eles.
+
+#### Ator: Central de Pagamentos (Sistema Externo)
+* **Processar Pagamento:** Recebe as informações de pagamento do nosso sistema e valida os dados da transação.
+* **Confirmar Transação:** Envia uma confirmação (aprovada) ou recusa (negada) do pagamento de volta ao nosso sistema.
+
+## Segurança
+
+* Toda utilização que envolva dados pessoais ou operações de gerenciamento (área do cliente, painel do atendente) requer autenticação do usuário.
+* Para o **Atendente**, operações críticas como `Cancelar Voos` e `Gerenciar Usuários` devem exigir autenticação de duplo fator para garantir a segurança dos dados.
+* As senhas dos usuários devem ser armazenadas de forma criptografada, utilizando algoritmos de *hash* modernos.
+
+## Usabilidade
+
+#### Fatores Humanos
+* O cliente será capaz de ver o que está escrito em diferentes telas (desktop e mobile). Dessa forma:
+    * O texto deve ser facilmente visível e os botões facilmente clicáveis.
+    * Cores associadas com formas comuns de daltonismo devem ser evitadas.
+* Velocidade, facilidade e um processo isento de erros são de importância primordial no processamento de vendas, pois o comprador deseja finalizar a compra rapidamente.
+* O atendente, ao gerenciar voos e usuários, deve ter uma interface clara e objetiva, que minimize a chance de erros operacionais. Alertas de confirmação para ações destrutivas (como cancelar um voo) são obrigatórios.
+
+## Confiabilidade
+
+#### Facilidade de recuperação
+* Se ocorrer uma falha na comunicação com a **Central de Pagamentos**, o sistema não deve perder os dados da sessão do cliente. Deve ser exibida uma mensagem de erro clara, permitindo que o usuário tente o pagamento novamente sem precisar preencher todas as informações do zero.
+
+## Desempenho
+* Conforme mencionado nos fatores humanos, os compradores querem completar uma venda rapidamente. Um gargalo em potencial é a autorização externa de pagamento. Nosso objetivo é obter uma autorização em **menos de 10 segundos**, em 90% das vezes.
+* A consulta de voos deve retornar os resultados em **menos de 4 segundos**, mesmo em períodos de alta demanda.
+
+## Regras de Negócio (Inferidas do Diagrama de Domínio)
+
+* Cada **Passagem** emitida deve estar vinculada a um **Pedido** e a um **Cliente** específico.
+* Um **Pedido** deve estar associado a um ou mais **Voos**.
+* Um **Atendente** é o ator responsável por gerenciar os dados de **Voos**, **Rotas** e **Usuários**.
+* Toda transação de compra que gera um **Pedido** deve ser processada e validada pela **Central de Pagamentos**.
 
 
 

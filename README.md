@@ -238,8 +238,8 @@ A seguir, descrevemos os padrões aplicados e a justificativa técnica para suas
 * **Princípio Fundamental:** Atribuir a responsabilidade de criar um objeto (Classe B) a outra classe (Classe A) se a Classe A agrega, contém ou possui uma forte associação com os objetos da Classe B.
 
 * **Aplicação no Projeto:**
-    1.  A classe `ControladorPedido` foi designada para criar instâncias de `Pedido`, pois é ela quem recebe os dados iniciais do usuário necessários para a criação do pedido.
-    2.  A classe `Pedido` é responsável por criar as instâncias de `Passagem`, pois um pedido conceitualmente agrega ou contém um conjunto de passagens.
+    *  **A classe `ControladorPedido` foi designada para criar instâncias de `Pedido`, pois é ela quem recebe os dados iniciais do usuário necessários para a criação do pedido.
+    *  **A classe `Pedido` é responsável por criar as instâncias de `Passagem`, pois um pedido conceitualmente agrega ou contém um conjunto de passagens.
 
 * **Justificativa da Utilização:**
     * **Coesão e Contexto:** A criação dos objetos ocorre no contexto em que eles fazem mais sentido. Isso mantém a lógica de negócio organizada e evita a criação de "classes fábrica" genéricas que diminuem a coesão do sistema.

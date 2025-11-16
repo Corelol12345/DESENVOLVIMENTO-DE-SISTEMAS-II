@@ -198,7 +198,32 @@ Os requisitos funcionais do sistema, extraídos dos diagramas e divididos por at
 * Velocidade, facilidade e um processo isento de erros são de importância primordial no processamento de vendas, pois o comprador deseja finalizar a compra rapidamente.
 * O atendente, ao gerenciar voos e usuários, deve ter uma interface clara e objetiva, que minimize a chance de erros operacionais. Alertas de confirmação para ações destrutivas (como cancelar um voo) são obrigatórios.
 
-## Confiabilidade
+## Confiabilidade## Descrição dos Componentes e Conexões
+
+Abaixo detalhamos o papel de cada componente e a justificativa para suas conexões, conforme ilustrado no diagrama.
+
+### 1. Componentes Principais
+
+* **[WebApp (Frontend)]:** É o componente de apresentação, responsável por toda a interface gráfica que roda no navegador do usuário (cliente). Ele é feito com tecnologias web (HTML, CSS, JavaScript) e é responsável por exibir os voos e capturar os dados do usuário.
+* **[Servidor API (Backend)]:** Este é o "cérebro" do sistema. É onde toda a lógica de negócio (definida nos padrões GRASP do TG4) reside. Ele expõe as funcionalidades do sistema de forma segura através de "Interfaces" (APIs).
+* **[Banco de Dados (MySQL)]:** É o componente responsável pela persistência dos dados. Armazena todas as informações vitais, como o cadastro de usuários, voos, rotas, pedidos e passagens.
+* **[Sistema de Pagamentos (Externo)]:** É um componente de terceiros, fora do nosso controle. Ele é especializado e seguro para processar transações financeiras (ex: dados de cartão de crédito).
+
+### 2. Justificativa das Conexões (Dependências)
+
+O motivo de cada linha no diagrama é explicado abaixo:
+
+* **Frontend `..>` API (de Voos e Pedidos):**
+    * **Descrição:** O Frontend *depende* das interfaces `API de Voos` e `API de Pedidos` que são providas pelo Servidor API.
+    * **Motivo:** A interface web (Frontend) não contém lógica de negócio nem tem acesso direto aos dados. Para exibir os voos, ela precisa *consultar* a `API de Voos`. Para realizar uma compra, ela precisa *enviar* os dados para a `API de Pedidos`. Esta separação é a base da arquitetura web moderna, garantindo segurança e flexibilidade.
+
+* **Servidor API `..>` Banco de Dados:**
+    * **Descrição:** O Servidor API *depende* do Banco de Dados.
+    * **Motivo:** O servidor precisa de um local para armazenar e recuperar informações de forma permanente. Quando o Frontend pede a lista de voos, a API busca essa informação no Banco de Dados. Quando uma compra é aprovada, a API *salva* os dados desse pedido no Banco de Dados.
+
+* **Servidor API `..>` Sistema de Pagamentos:**
+    * **Descrição:** O Servidor API *depende* do Sistema de Pagamentos Externo.
+    * **Motivo:** Nosso sistema não deve (e por regras de segurança, não pode) processar ou armazenar dados sensíveis de cartão de crédito. Quando o usuário finaliza a compra, a API *delega* a responsabilidade da transação financeira para este sistema externo, que é especialista nisso. A API apenas envia o valor e aguarda uma resposta de "aprovado" ou "recusado".
 
 #### Facilidade de recuperação
 * Se ocorrer uma falha na comunicação com a **Central de Pagamentos**, o sistema não deve perder os dados da sessão do cliente. Deve ser exibida uma mensagem de erro clara, permitindo que o usuário tente o pagamento novamente sem precisar preencher todas as informações do zero.
@@ -282,16 +307,16 @@ Abaixo detalhamos o papel de cada componente e a justificativa para suas conexõ
 O motivo de cada linha no diagrama é explicado abaixo:
 
 * **Frontend `..>` API (de Voos e Pedidos):**
-    * **Descrição:** O Frontend *depende* das interfaces `API de Voos` e `API de Pedidos` que são providas pelo Servidor API.
-    * **Motivo:** A interface web (Frontend) não contém lógica de negócio nem tem acesso direto aos dados. Para exibir os voos, ela precisa *consultar* a `API de Voos`. Para realizar uma compra, ela precisa *enviar* os dados para a `API de Pedidos`. Esta separação é a base da arquitetura web moderna, garantindo segurança e flexibilidade.
+    * **Descrição:** O Frontend depende das interfaces `API de Voos` e `API de Pedidos` que são providas pelo Servidor API.
+    * **Motivo:** A interface web (Frontend) não contém lógica de negócio nem tem acesso direto aos dados. Para exibir os voos, ela precisa consultar a `API de Voos`. Para realizar uma compra, ela precisa enviar os dados para a `API de Pedidos`. Esta separação é a base da arquitetura web moderna, garantindo segurança e flexibilidade.
 
 * **Servidor API `..>` Banco de Dados:**
-    * **Descrição:** O Servidor API *depende* do Banco de Dados.
-    * **Motivo:** O servidor precisa de um local para armazenar e recuperar informações de forma permanente. Quando o Frontend pede a lista de voos, a API busca essa informação no Banco de Dados. Quando uma compra é aprovada, a API *salva* os dados desse pedido no Banco de Dados.
+    * **Descrição:** O Servidor API depende do Banco de Dados.
+    * **Motivo:** O servidor precisa de um local para armazenar e recuperar informações de forma permanente. Quando o Frontend pede a lista de voos, a API busca essa informação no Banco de Dados. Quando uma compra é aprovada, a API salva os dados desse pedido no Banco de Dados.
 
 * **Servidor API `..>` Sistema de Pagamentos:**
-    * **Descrição:** O Servidor API *depende* do Sistema de Pagamentos Externo.
-    * **Motivo:** Nosso sistema não deve (e por regras de segurança, não pode) processar ou armazenar dados sensíveis de cartão de crédito. Quando o usuário finaliza a compra, a API *delega* a responsabilidade da transação financeira para este sistema externo, que é especialista nisso. A API apenas envia o valor e aguarda uma resposta de "aprovado" ou "recusado".
+    * **Descrição:** O Servidor API depende do Sistema de Pagamentos Externo.
+    * **Motivo:** Nosso sistema não deve (e por regras de segurança, não pode) processar ou armazenar dados sensíveis de cartão de crédito. Quando o usuário finaliza a compra, a API delega a responsabilidade da transação financeira para este sistema externo, que é especialista nisso. A API apenas envia o valor e aguarda uma resposta de "aprovado" ou "recusado".
 
 
 

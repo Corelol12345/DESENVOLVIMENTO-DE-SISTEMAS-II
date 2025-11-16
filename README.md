@@ -256,7 +256,7 @@ A seguir, descrevemos os padrões aplicados e a justificativa técnica para suas
 
 ----------------------------------------------------------
 
-# Diagrana de Componentes
+# Diagrama de Componentes
 
 O diagrama de componentes abaixo foca na estrutura modular do sistema, mostrando as dependências e as interfaces de comunicação entre os blocos.
 

@@ -254,6 +254,45 @@ A seguir, descrevemos os padrões aplicados e a justificativa técnica para suas
     * **Encapsulamento e Baixo Acoplamento:** A classe `Pedido` é a única que conhece a lista completa de `Passagens` associadas a ele. Portanto, ela é a especialista com as informações necessárias para realizar o cálculo. Atribuir essa responsabilidade a outra classe (como o `ControladorPedido`) exigiria que o `Pedido` expusesse sua estrutura interna, violando o encapsulamento e aumentando o acoplamento entre as classes.
 
 
+----------------------------------------------------------
+
+# Diagrana de Componentes
+
+O diagrama de componentes abaixo foca na estrutura modular do sistema, mostrando as dependências e as interfaces de comunicação entre os blocos.
+
+## Diagrama
+
+O diagrama a seguir divide o sistema em quatro componentes principais, mostrando como o `Frontend` (interface do usuário) se comunica com o `Servidor API` para acessar o `Banco de Dados` e o `Sistema de Pagamentos Externo`.
+
+<img width="886" height="235" alt="diagrama de componentes" src="https://github.com/user-attachments/assets/cf1ca90d-4c6b-4eb3-9cbc-026bf9453740" />
+
+## Descrição dos Componentes e Conexões
+
+Abaixo detalhamos o papel de cada componente e a justificativa para suas conexões, conforme ilustrado no diagrama.
+
+### 1. Componentes Principais
+
+* **[WebApp (Frontend)]:** É o componente de apresentação, responsável por toda a interface gráfica que roda no navegador do usuário (cliente). Ele é feito com tecnologias web (HTML, CSS, JavaScript) e é responsável por exibir os voos e capturar os dados do usuário.
+* **[Servidor API (Backend)]:** Este é o "cérebro" do sistema. É onde toda a lógica de negócio (definida nos padrões GRASP do TG4) reside. Ele expõe as funcionalidades do sistema de forma segura através de "Interfaces" (APIs).
+* **[Banco de Dados (MySQL)]:** É o componente responsável pela persistência dos dados. Armazena todas as informações vitais, como o cadastro de usuários, voos, rotas, pedidos e passagens.
+* **[Sistema de Pagamentos (Externo)]:** É um componente de terceiros, fora do nosso controle. Ele é especializado e seguro para processar transações financeiras (ex: dados de cartão de crédito).
+
+### 2. Justificativa das Conexões (Dependências)
+
+O motivo de cada linha no diagrama é explicado abaixo:
+
+* **Frontend `..>` API (de Voos e Pedidos):**
+    * **Descrição:** O Frontend *depende* das interfaces `API de Voos` e `API de Pedidos` que são providas pelo Servidor API.
+    * **Motivo:** A interface web (Frontend) não contém lógica de negócio nem tem acesso direto aos dados. Para exibir os voos, ela precisa *consultar* a `API de Voos`. Para realizar uma compra, ela precisa *enviar* os dados para a `API de Pedidos`. Esta separação é a base da arquitetura web moderna, garantindo segurança e flexibilidade.
+
+* **Servidor API `..>` Banco de Dados:**
+    * **Descrição:** O Servidor API *depende* do Banco de Dados.
+    * **Motivo:** O servidor precisa de um local para armazenar e recuperar informações de forma permanente. Quando o Frontend pede a lista de voos, a API busca essa informação no Banco de Dados. Quando uma compra é aprovada, a API *salva* os dados desse pedido no Banco de Dados.
+
+* **Servidor API `..>` Sistema de Pagamentos:**
+    * **Descrição:** O Servidor API *depende* do Sistema de Pagamentos Externo.
+    * **Motivo:** Nosso sistema não deve (e por regras de segurança, não pode) processar ou armazenar dados sensíveis de cartão de crédito. Quando o usuário finaliza a compra, a API *delega* a responsabilidade da transação financeira para este sistema externo, que é especialista nisso. A API apenas envia o valor e aguarda uma resposta de "aprovado" ou "recusado".
+
 
 
 
